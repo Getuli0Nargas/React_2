@@ -3,33 +3,33 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [cont, setCont] = useState(0)
+  const [title, setTitle] = useState(true)
+  const [value, setValue] = useState('')
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+    function App() {
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => setCont((cont) => cont + 10)}>
+          cont is {cont}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <div className="card">
+        <button onClick={() => setCont((cont) => cont - 10)}>
+          cont is {cont}
+        </button>
+       </div>
+       <button onClick={() => setTitle (title ? false : true)}>sumir</button> 
+    {title ? <h1>sem titulo</h1> : <h1>BALACOBACO</h1>}
+    <div className=''>
+      <h1>{value}</h1>
+      <input type="text" onChange={(e)=> setValue(e.target.value)} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </div>
+} 
     </>
   )
 }
-
 export default App

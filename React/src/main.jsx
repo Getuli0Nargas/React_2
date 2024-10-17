@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
-import HelloWorld from '../HelloWorld.jsx'
+import App from './App.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
-    <HelloWorld />
+    <App />
 )
